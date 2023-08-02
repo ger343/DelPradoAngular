@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import{CargarScriptsService} from "./servicios/cargar-scripts.service"
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
@@ -22,7 +24,7 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CargarScriptsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
