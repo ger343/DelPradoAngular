@@ -68,7 +68,7 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 // ----- Multiple text (typed js) ------
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Sociologist', 'Dreamer', 'Blogger'],
+    strings: ['Trabajador Social', 'Investigador', 'Docente','Extensionista' ],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 100,

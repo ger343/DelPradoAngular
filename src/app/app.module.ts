@@ -11,6 +11,8 @@ import { AboutComponent } from './componentes/about/about.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 
+import { VideosComponent } from './componentes/videos/videos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    
+    VideosComponent
   ],
   imports: [
     BrowserModule,
