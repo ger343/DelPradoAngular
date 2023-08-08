@@ -82,6 +82,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(var(--second-bg-color),var(--bg-color));
 }
 
 .home-content h3 {
@@ -361,7 +362,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--second-ngbg-color);
 }
 
 .footer-text p {
