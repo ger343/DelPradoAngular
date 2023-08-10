@@ -18,6 +18,12 @@ import { AboutEditComponent } from './componentes/about-edit/about-edit.componen
 import { HomeEditComponent } from './componentes/home-edit/home-edit.component';
 import { VideoAgregarComponent } from './componentes/video-agregar/video-agregar.component';
 
+//*** Importamos las clases para trabajar con firestone ***//
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from 'src/environments/environments';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +42,11 @@ import { VideoAgregarComponent } from './componentes/video-agregar/video-agregar
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule
+
   ],
   providers: [CargarScriptsService],
   bootstrap: [AppComponent]
