@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
 import { Home } from 'src/app/home.model';
 import { HomeService } from 'src/app/servicios/home.service';
@@ -9,7 +9,7 @@ import { HomeService } from 'src/app/servicios/home.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit  {
   Home: Home[]
 
   constructor(private homeService: HomeService) { }
