@@ -10,7 +10,7 @@ import { HomeService } from 'src/app/servicios/home.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit  {
-  Home: Home[]
+  Home: Home[] 
 
   constructor(private homeService: HomeService) { }
 

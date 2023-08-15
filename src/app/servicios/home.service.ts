@@ -8,6 +8,13 @@ import { Home } from '../home.model';
   providedIn: 'root'
 })
 export class HomeService {
+  updatePost(value: any, id: string) {
+    throw new Error('Method not implemented.');
+  }
+  gethomeById(id: string) {
+    throw new Error('Method not implemented.');
+  }
+  createHome: any;
 
   constructor(private angularFirestore: AngularFirestore) { }
 

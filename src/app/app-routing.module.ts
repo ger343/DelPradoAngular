@@ -10,7 +10,7 @@ import { VideoAgregarComponent } from './componentes/video-agregar/video-agregar
 const routes: Routes = [
   {path: '', component:InicioComponent},
   {path:'login',component:LoginComponent},
-  {path:'home-edit',component:HomeEditComponent},
+  {path:'home-edit/:id',component:HomeEditComponent},
   {path:'about-edit',component:AboutEditComponent},
   {path:'video-agregar',component:VideoAgregarComponent}
 ];
