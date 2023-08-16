@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '', component:InicioComponent},
   {path:'login',component:LoginComponent},
   {path:'home-edit/:id',component:HomeEditComponent},
-  {path:'about-edit',component:AboutEditComponent},
+  {path:'about-edit/:id',component:AboutEditComponent},
   {path:'video-agregar',component:VideoAgregarComponent}
 ];
 

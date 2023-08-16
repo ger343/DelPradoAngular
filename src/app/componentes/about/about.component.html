@@ -1,19 +1,17 @@
 
 <section class="about" id="about">
     <div class="about-img">
-        <img src="assets/img/perfil.jpg" alt="">
+        <img *ngFor="let about of About" src= {{about.imgabout}} alt="">
     </div>
 
     <div class="about-content">
         <h2 class="heading">Sobre <span>Mí</span></h2>
         
         <h3></h3>
-        <p>Nací en Paraná, Entre Ríos, Argentina (1981). Soy licenciado en Trabajo Social (Universidad Nacional de Entre Ríos), especialista en Abordaje Integral de Problemáticas Sociales en el Ámbito Comunitario (Universidad de Lanús) y doctor en Ciencias Sociales (Universidad de Buenos Aires). <br>
-            En la actualidad me desempeño como investigador y docente en el Departamento de Ciencias Sociales, CENUR LN, de la Universidad de la República. Soy investigador del Sistema Nacional de Investigadores de la Agencia Nacional de Investigación e Innovación (ANNI- Uruguay). <br>
-            He participado en diferentes proyectos de investigación y extensión vinculados al desarrollo social, la pobreza, el trabajo social y el trabajo comunitario en la Universidad Nacional de Entre Ríos, la Universidad Autónoma de Entre Ríos, la Universidad de la República y la Universidad de Buenos Aires. He sido becario doctoral y postdoctoral del CONICET.
+        <p *ngFor="let about of About"> {{about.textoabout}}
             </p>
             <div class="social-media">
-                <a routerLink="/about-edit"target="_blank"><i class='bx bx-edit-alt'></i></a></div>
+                <a *ngFor="let about of About" routerLink="/about-edit/{{about.id}}" target="_blank"><i class='bx bx-edit-alt'></i></a></div>
         <!-- <a href="#" class="btn">Read More</a> -->
     </div>
 </section>
