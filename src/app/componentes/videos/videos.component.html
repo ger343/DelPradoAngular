@@ -1,57 +1,34 @@
 <section class="portfolio" id="videos">
     <h2 class="heading">Videos y <span>Proyectos</span></h2>
 
-    
-        <div class="portfolio-container" >
-            <div class="portfolio-box">  
-
-        <tr *ngFor="let video of Video">
-
-           <td>
-            <div  class="portfolio-container"> 
-              <div class="portfolio-box">
-                        <img src={{video.linkvideo}} alt="">
-                        <div class="portfolio-layer">
-                            <h4>{{video.titulovideo}}</h4>
-                            <p>{{video.descripcionvideo}}</p>
-            
-                            <div>
-                                <a routerLink="{{video.linkvideo}}" target="_blank">
-                                    <i class='bx bx-link-external'></i>
-                                </a>
-            
-                                <a class="ms-2" href="" target="_blank"><i class='bx bx-trash'></i></a>
-                            </div>
-                        </div> 
-                    
-
-                
-              </div>
-            </div>
-        </td>
-        </tr>
-    </div>
-        </div>
-   
-
-    <!-- <div  class="portfolio-container"> -->
-    <!-- <div class="portfolio-box">
-            <img src={{video.linkvideo}} alt="">
+    <div class="portfolio-container" >
+        <div class="portfolio-box" *ngFor="let video of Video" >
+            <iframe width="930" height="250" href="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="portfolio-layer">
                 <h4>{{video.titulovideo}}</h4>
                 <p>{{video.descripcionvideo}}</p>
 
-                <div>
-                    <a routerLink="{{video.linkvideo}}" target="_blank">
-                        <i class='bx bx-link-external'></i>
-                    </a>
+               <div>
+                <a href = "https://www.youtube.com/watch?v="target="_blank">
+                    <i class='bx bx-link-external'></i>
 
-                    <a class="ms-2" href="" target="_blank"><i class='bx bx-trash'></i></a>
-                </div>
+                </a>
+               
+                <a class="ms-2" href="" target="_blank"><i class='bx bx-trash'></i></a>
+               
             </div>
+
+
+            </div>
+
         </div>
-    </div> -->
+
+        
+
+       
+    </div>
     <div class="social-media">
         <a routerLink="/video-agregar" target="_blank"><i class='bx bx-video-plus'></i></a>
     </div>
+
 </section>
