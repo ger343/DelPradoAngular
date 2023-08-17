@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 import { Home } from '../home.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -44,4 +45,5 @@ export class HomeService {
       })
   }
 
+ 
 }
