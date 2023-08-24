@@ -26,6 +26,7 @@ import { environment } from 'src/environments/environments';
 
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
          InicioComponent,
          AboutEditComponent,
          HomeEditComponent,
-         VideoAgregarComponent
+         VideoAgregarComponent,
+      
   ],
   imports: [
     BrowserModule,

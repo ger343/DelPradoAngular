@@ -3,18 +3,19 @@
 
     <div class="portfolio-container" >
         <div class="portfolio-box" *ngFor="let video of Video" >
-            <iframe width="930" height="250" href="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <img width="930" height="250" src="{{video.imgvideo}}" title="417 HZ • ELEVA LA VIBRACIÓN DEL HOGAR • Música para Eliminar Energías Negativas y Limpiar Ambientes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>
+           
             <div class="portfolio-layer">
                 <h4>{{video.titulovideo}}</h4>
                 <p>{{video.descripcionvideo}}</p>
 
                <div>
-                <a href = "https://www.youtube.com/watch?v="target="_blank">
+                <a href = "{{video.linkvideo}}"target="_blank">
                     <i class='bx bx-link-external'></i>
 
                 </a>
                
-                <a class="ms-2" href="" target="_blank"><i class='bx bx-trash'></i></a>
+                <a class="ms-2" (click)="deleteRow(video)" target="_blank"><i class='bx bx-trash'></i></a>
                
             </div>
 

@@ -10,7 +10,7 @@ import { VideoService } from 'src/app/servicios/video.service';
 export class VideosComponent implements OnInit {
 
   Video: Video[]
-  url: string = "https://www.youtube.com/watch?v="
+  
   constructor(private videoService: VideoService) { }
 
   ngOnInit(): void {
