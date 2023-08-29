@@ -25,6 +25,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environments';
 
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './componentes/register/register.component';
+import { MainComponent } from './componentes/main/main.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
          AboutEditComponent,
          HomeEditComponent,
          VideoAgregarComponent,
+         RegisterComponent,
+         MainComponent,
       
   ],
   imports: [
