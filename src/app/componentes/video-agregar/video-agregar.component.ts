@@ -20,7 +20,8 @@ export class VideoAgregarComponent implements OnInit {
     this.videoForm = this.formBuilder.group({
       linkvideo : [''],
       titulovideo : [''],
-      descripcionvideo : ['']
+      descripcionvideo : [''],
+      imgvideo:['']
     })
   }
 
