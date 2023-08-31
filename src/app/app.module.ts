@@ -22,11 +22,14 @@ import { VideoAgregarComponent } from './componentes/video-agregar/video-agregar
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { environment } from 'src/environments/environments';
+//import { environment } from 'src/environments/environment';
 
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './componentes/register/register.component';
 import { MainComponent } from './componentes/main/main.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -55,7 +58,9 @@ import { MainComponent } from './componentes/main/main.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
 
   ],
   providers: [CargarScriptsService],
