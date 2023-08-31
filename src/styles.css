@@ -467,9 +467,11 @@ span {
 
     .home-content img {
         width: 70vw;
+        
+    }
+    .home-img {
         margin-top: 4rem;
     }
-
     .about {
         flex-direction: column-reverse;
     }
