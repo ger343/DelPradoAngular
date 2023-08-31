@@ -10,8 +10,11 @@
         <h3></h3>
         <p *ngFor="let about of About"> {{about.textoabout}}
             </p>
-            <div class="social-media">
-                <a *ngFor="let about of About" routerLink="/about-edit/{{about.id}}" target="_blank"><i class='bx bx-edit-alt'></i></a></div>
+            <div class="social-media" *ngIf="isLogged==='Si'">
+                <a *ngFor="let about of About" routerLink="/about-edit/{{about.id}}" target="_blank" >
+                    <i class='bx bx-edit-alt'></i>
+                </a>
+            </div>
         <!-- <a href="#" class="btn">Read More</a> -->
     </div>
 </section>

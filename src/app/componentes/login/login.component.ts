@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.formLogin.value)
       .then(response => {
         console.log(response);
+        sessionStorage.setItem('test','Si');
         this.router.navigate(['']);
       })
       .catch(error => console.log(error));

@@ -9,8 +9,10 @@ import { AboutService } from 'src/app/servicios/about.service';
 })
 export class AboutComponent implements OnInit {
   About:About []
+  isLogged: string = sessionStorage.getItem ('test')
 
   constructor(private aboutService: AboutService,
+    
     private _CargaScripts:CargarScriptsService)
   {}
     ngOnInit(): void {

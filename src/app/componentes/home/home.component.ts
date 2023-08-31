@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AfterViewInit } from '@angular/core';
+
 import { Home } from 'src/app/home.model';
 import { HomeService } from 'src/app/servicios/home.service';
 
@@ -11,9 +11,14 @@ import { HomeService } from 'src/app/servicios/home.service';
 })
 export class HomeComponent implements OnInit  {
   Home: Home[] 
+  authenticated: boolean = false;
 
   constructor(private homeService: HomeService) { }
 
+
+
+
+  
   ngOnInit(): void {
     this.homeService.getHome().subscribe((res) => {
       this.Home = res.map((e) => {

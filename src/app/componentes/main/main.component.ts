@@ -20,7 +20,8 @@ export class MainComponent implements OnInit {
   onClick() {
     this.userService.logout()
       .then(() => {
-        this.router.navigate(['/register']);
+        sessionStorage.setItem('test','No');
+        this.router.navigate(['']);
       })
       .catch(error => console.log(error));
   }
