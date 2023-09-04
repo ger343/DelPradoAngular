@@ -8,6 +8,6 @@
         <a href="#about">Sobre mí</a>
         <a href="#videos">Videos</a>
         <a href="#contact">Contacto</a>
-
+        <button *ngIf="isLogged==='Si'"  (click)="onClick()" class="btn btn-outline-danger ms-4">Logout</button>
     </nav>
 </header>

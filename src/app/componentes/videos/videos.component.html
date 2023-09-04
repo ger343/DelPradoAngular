@@ -15,7 +15,7 @@
 
                 </a>
                
-                <a class="ms-2" (click)="deleteRow(video)" target="_blank"><i class='bx bx-trash'></i></a>
+                <a *ngIf="isLogged==='Si'" class="ms-2" (click)="deleteRow(video)" target="_blank"><i class='bx bx-trash'></i></a>
                
             </div>
 
@@ -28,7 +28,7 @@
 
        
     </div>
-    <div class="social-media">
+    <div class="social-media" *ngIf="isLogged==='Si'">
         <a routerLink="/video-agregar" target="_blank"><i class='bx bx-video-plus'></i></a>
     </div>
 

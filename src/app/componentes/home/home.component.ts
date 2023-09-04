@@ -11,7 +11,7 @@ import { HomeService } from 'src/app/servicios/home.service';
 })
 export class HomeComponent implements OnInit  {
   Home: Home[] 
-  authenticated: boolean = false;
+  isLogged: string = sessionStorage.getItem ('test')
 
   constructor(private homeService: HomeService) { }
 

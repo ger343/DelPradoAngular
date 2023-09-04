@@ -30,7 +30,5 @@ export class AboutComponent implements OnInit {
 
 }  
   
-function ngOnInit() {
-  throw new Error('Function not implemented.');
-}
+
 

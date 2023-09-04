@@ -10,7 +10,7 @@ import { VideoService } from 'src/app/servicios/video.service';
 export class VideosComponent implements OnInit {
 
   Video: Video[]
-  
+  isLogged: string = sessionStorage.getItem ('test')
   constructor(private videoService: VideoService) { }
 
   ngOnInit(): void {
