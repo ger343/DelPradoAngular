@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import{CargarScriptsService} from "./servicios/cargar-scripts.service"
+import { CargarScriptsService } from "./servicios/cargar-scripts.service"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,12 +24,11 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 //import { environment } from 'src/environments/environment';
 
-import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './componentes/register/register.component';
-import { MainComponent } from './componentes/main/main.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -40,16 +39,13 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     AboutComponent,
     HomeComponent,
     ContactoComponent,
-    
     VideosComponent,
-         LoginComponent,
-         InicioComponent,
-         AboutEditComponent,
-         HomeEditComponent,
-         VideoAgregarComponent,
-         RegisterComponent,
-         MainComponent,
-      
+    LoginComponent,
+    InicioComponent,
+    AboutEditComponent,
+    HomeEditComponent,
+    VideoAgregarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

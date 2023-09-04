@@ -8,14 +8,12 @@ import { AboutEditComponent } from './componentes/about-edit/about-edit.componen
 import { VideoAgregarComponent } from './componentes/video-agregar/video-agregar.component';
 //import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RegisterComponent } from './componentes/register/register.component';
-import { MainComponent } from './componentes/main/main.component';
 
 
 const routes: Routes = [
  
 
   {path: '', component:InicioComponent},
-  {path: 'main', component:MainComponent},
   { path: 'register', component: RegisterComponent },
   {path:'login',component:LoginComponent},
   {path:'home-edit/:id',component:HomeEditComponent},
