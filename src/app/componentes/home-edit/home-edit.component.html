@@ -1,17 +1,34 @@
-<h2>Componente EDIT</h2>
+<section class=" vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-8">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-2 text-center">
+              <div class="mb-md-4 mt-md-4 pb-1">
+  
+                <h2 class="fw-bold mb-2 text-uppercase">Edición de presentación</h2>
+                <br>
+  
+                <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="nombreUsuario">Imagen</label>
+                    <input formControlName="imghome" type="text" class="form-control" required>
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="password">Texto</label>
+                    <textarea formControlName="textohome" type="text" class="form-control" rows="6" required></textarea>
+                  </div>
 
-<form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Actualizar</button>
 
-    <div class="mb-3">
-        <label class="form-label"> imagen</label>
-        <input formControlName="imghome" type="text" class="form-control" required>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mb-3">
-        <label class="form-label"> texto </label>
-        <input formControlName="textohome" type="text" class="form-control" required>
-    </div>
-    
-
-    <button type="submit" class="btn btn-primary"> Actualizar </button>
-
-</form>
+</section>
