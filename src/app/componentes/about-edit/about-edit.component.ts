@@ -41,6 +41,7 @@ export class AboutEditComponent implements OnInit {
   onSubmit(){
     const id = this.activateRoute.snapshot.paramMap.get('id');
     this.aboutService.updateDatos(this.editForm.value, id);
+    sessionStorage.setItem('test','Si');
     this.router.navigate(['']);
   }
 

@@ -30,6 +30,7 @@ export class VideoAgregarComponent implements OnInit {
 
   onSubmit(){
     this.videoService.createVideo(this.videoForm.value),
+    sessionStorage.setItem('test','Si');
     this.router.navigate([''])
   }
 
