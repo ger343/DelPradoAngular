@@ -1,24 +1,44 @@
-<h2>Agregar Video</h2>
+<section class="completar vh-100 gradient-custom">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-8">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-2 text-center">
+              <div class="mb-md-4 mt-md-4 pb-1">
+  
+                <h2 class="fw-bold mb-2 text-uppercase">Agregar video</h2>
+                <br>
+  
+                <form [formGroup]="videoForm" (ngSubmit)="onSubmit()">
+  
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label"> Link</label>
+                    <input formControlName="linkvideo" type="text" class="form-control" required>
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label"> imagen</label>
+                    <input formControlName="imgvideo" type="text" class="form-control" required>
+                  </div>
 
-<form [formGroup]="videoForm" (ngSubmit)="onSubmit()" novalidate>
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label"> Titulo </label>
+                    <input formControlName="titulovideo" type="text" class="form-control" required>
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label"> Descripcion </label>
+                    <textarea formControlName="descripcionvideo" type="text" class="form-control" rows="6" required></textarea>
+                  </div>
 
-    <div class="mb-3">
-        <label class="form-label"> Link</label>
-        <input formControlName="linkvideo" type="text" class="form-control" required>
-    </div>
-    <div class="mb-3">
-        <label class="form-label"> imagen</label>
-        <input formControlName="imgvideo" type="text" class="form-control" required>
-    </div>
-    <div class="mb-3">
-        <label class="form-label"> Titulo </label>
-        <input formControlName="titulovideo" type="text" class="form-control" required>
-    </div>
-    <div class="mb-3">
-        <label class="form-label"> Descripcion </label>
-        <input formControlName="descripcionvideo" type="text" class="form-control" required>
-    </div>
+                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Agregar</button>
 
-    <button type="submit" class="btn btn-primary"> Agregar </button>
+                </form>
 
-</form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
