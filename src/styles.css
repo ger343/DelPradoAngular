@@ -36,6 +36,10 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+.completar {
+    font-size: 100%;
+}
+
 .header {
     position: fixed;
     top: 0;

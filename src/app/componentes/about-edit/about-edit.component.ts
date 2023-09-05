@@ -15,37 +15,34 @@ export class AboutEditComponent implements OnInit {
  
 
   constructor(
- public aboutService: AboutService,
- public formBuilder: FormBuilder,
- private activateRoute: ActivatedRoute,
- private router: Router
+    public aboutService: AboutService,
+    public formBuilder: FormBuilder,
+    private activateRoute: ActivatedRoute,
+    private router: Router
+    )
+      { 
+        this.editForm = this.formBuilder.group({
+          imgabout : [''],
+          textoabout : ['']
+        })
+      }
 
-  )
-
-  { 
-    this.editForm = this.formBuilder.group({
-      imgabout : [''],
-      textoabout : ['']
-      
+  ngOnInit(): void {
+    const id = this.activateRoute.snapshot.paramMap.get('id');
+    this.aboutService.getAboutById(id).subscribe( res => {
+      this.editRef = res;
+      this.editForm = this.formBuilder.group({
+        imgabout: [this.editRef.imgabout],
+        textoabout: [this.editRef.textoabout]     
+      }) 
     })
+  }
 
-}
-ngOnInit(): void {
-  const id = this.activateRoute.snapshot.paramMap.get('id');
-  this.aboutService.getAboutById(id).subscribe( res => {
-    this.editRef = res;
-    this.editForm = this.formBuilder.group({
-      imgabout: [this.editRef.imgabout],
-      textoabout: [this.editRef.textoabout]     
-    }) 
-  })
-}
-
-onSubmit(){
-  const id = this.activateRoute.snapshot.paramMap.get('id');
-  this.aboutService.updateDatos(this.editForm.value, id);
-  this.router.navigate(['']);
-}
+  onSubmit(){
+    const id = this.activateRoute.snapshot.paramMap.get('id');
+    this.aboutService.updateDatos(this.editForm.value, id);
+    this.router.navigate(['']);
+  }
 
 }
 

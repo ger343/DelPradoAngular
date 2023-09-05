@@ -15,10 +15,6 @@ export class HomeComponent implements OnInit  {
 
   constructor(private homeService: HomeService) { }
 
-
-
-
-  
   ngOnInit(): void {
     this.homeService.getHome().subscribe((res) => {
       this.Home = res.map((e) => {
@@ -26,10 +22,8 @@ export class HomeComponent implements OnInit  {
           id: e.payload.doc.id,
           ...(e.payload.doc.data() as Home)
         }
-
       })
     })
-
   }
 
   ngAfterViewInit(): void {
