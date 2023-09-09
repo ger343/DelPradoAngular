@@ -23,6 +23,7 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
+
 a {text-decoration: none;}
 
 body {
@@ -44,7 +45,7 @@ section {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
@@ -62,7 +63,7 @@ section {
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
-    
+
 }
 
 .navbar a {
@@ -269,6 +270,7 @@ span {
 
 .portfolio-box img {
     width: 100%;
+    object-fit: cover;
     transition: .5s ease;
 }
 
@@ -388,11 +390,16 @@ span {
 
 .footer-iconTop a:hover {
     box-shadow: 0 0 1rem var(--main-color);
-} 
+}
 
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--second-bg-color);
+}
+
+
+.form-control {
+  font-size: medium;
 }
 
 
@@ -406,12 +413,12 @@ span {
 
 @media (max-width: 991px) {
     .header {
-        padding: 2rem 3%;
+        padding: 2rem 5rem;
     }
 
-    section {
+    /* section {
         padding: 10rem 3% 2rem;
-    }
+    } */
 
     .services {
         padding-bottom: 7rem;
@@ -426,7 +433,7 @@ span {
     }
 
     .footer {
-        padding: 2rem 3%;
+        padding: 2rem 5rem;
     }
 }
 
@@ -434,13 +441,13 @@ span {
     #menu-icon {
         display: block;
     }
-    
+
     .navbar {
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
-        padding: 1rem 3%;
+        width: 100vw;
+        padding: 1rem 3rem;
         background: var(--bg-color);
         border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
@@ -471,7 +478,7 @@ span {
 
     .home-content img {
         width: 70vw;
-        
+
     }
     .home-img {
         margin-top: 4rem;
@@ -496,6 +503,10 @@ span {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .footer {
+      padding: 1rem 3rem;
+  }
 }
 
 @media (max-width: 617px) {

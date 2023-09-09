@@ -1,35 +1,30 @@
 <section class="portfolio" id="videos">
-    <h2 class="heading">Videos y <span>Proyectos</span></h2>
+  <h2 class="heading">Videos y <span>Proyectos</span></h2>
 
-    <div class="portfolio-container" >
-        <div class="portfolio-box" *ngFor="let video of Video" >
-            <img width="930" height="250" src="{{video.imgvideo}}" />
-           
-            <div class="portfolio-layer">
-                <h4>{{video.titulovideo}}</h4>
-                <p>{{video.descripcionvideo}}</p>
+  <div class="portfolio-container">
+    <div class="portfolio-box" *ngFor="let video of Video">
+      <img width="930" height="250" src="{{video.imgvideo}}"/>
 
-               <div>
-                <a href = "{{video.linkvideo}}"target="_blank">
-                    <i class='bx bx-link-external'></i>
+      <div class="portfolio-layer">
+        <h4>{{video.titulovideo}}</h4>
+        <p>{{video.descripcionvideo}}</p>
 
-                </a>
-               
-                <a *ngIf="isLogged==='Si'" class="ms-2" (click)="deleteRow(video)" target="_blank"><i class='bx bx-trash'></i></a>
-               
-            </div>
-
-
-            </div>
-
+        <div>
+          <a href="{{video.linkvideo}}" target="_blank">
+            <i class='bx bx-link-external'></i>
+          </a>
+          <a *ngIf="isLogged==='Si'" class="ms-2" (click)="deleteRow(video)" target="_blank">
+            <i class='bx bx-trash'></i>
+          </a>
         </div>
 
-        
+      </div>
 
-       
     </div>
-    <div class="social-media" *ngIf="isLogged==='Si'">
-        <a routerLink="/video-agregar" target="_blank"><i class='bx bx-video-plus'></i></a>
-    </div>
+  </div>
+
+  <div class="social-media" *ngIf="isLogged==='Si'">
+    <a routerLink="/video-agregar" target="_blank"><i class='bx bx-video-plus'></i></a>
+  </div>
 
 </section>
