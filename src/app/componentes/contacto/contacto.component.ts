@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { environment } from 'src/environments/environment';
+import Swal from 'sweetalert2';
 import { __await } from 'tslib';
 import { MailService } from 'src/app/servicios/mail.service';
 @Component({
@@ -36,9 +36,22 @@ async submitEmail(contactForm:NgForm){
     if (!res.ok){
       throw new Error();}
       contactForm.reset();
+      Swal.fire({
+        
+        icon: 'success',
+        iconColor:'#00EEFF',
+        title: 'Mensaje Enviado',
+        showConfirmButton: false,
+        timer: 1800
+      })
     }
  catch (err){
-  alert(err.message)
+  Swal.fire({
+    icon: 'error',
+    title: 'Error',
+    text: 'No se pudo Enviar en Mensaje!',
+    
+  })
  }
  
  

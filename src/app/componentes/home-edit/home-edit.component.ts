@@ -45,6 +45,7 @@ export class HomeEditComponent implements OnInit {
   onSubmit(){
     const id = this.activateRoute.snapshot.paramMap.get('id');
     this.homeService.updateDatos(this.editForm.value, id);
+    sessionStorage.setItem('test','Si');
     this.router.navigate(['']);
   }
 

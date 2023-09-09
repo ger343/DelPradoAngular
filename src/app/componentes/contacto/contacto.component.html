@@ -4,14 +4,14 @@
 
     <form #contactForm="ngForm" (ngSubmit)="submitEmail(contactForm)">
         <div class="input-box">
-            <input name="name" [(ngModel)]= "contactFormValues.name" #name="ngModel" type="text" placeholder="Nombre">
-            <input name="email" [(ngModel)]="contactFormValues.email" #name="ngModel" type="email" placeholder="Email">
+            <input name="name" [(ngModel)]= "contactFormValues.name" #name="ngModel" type="text" placeholder="Nombre" />
+            <input name="email" [(ngModel)]="contactFormValues.email" #name="ngModel" type="email" placeholder="Email"  />
         </div>
         <div class="input-box">
-            <input name="celular" [(ngModel)]= "contactFormValues.celular" #name="ngModel" type="number" placeholder="Numero Mobil">
-            <input name="asunto" [(ngModel)]= "contactFormValues.asunto" #name="ngModel"  type="text" placeholder="Asunto">
+            <input name="celular" [(ngModel)]= "contactFormValues.celular" #name="ngModel" type="number" placeholder="Numero Mobil" />
+            <input name="asunto" [(ngModel)]= "contactFormValues.asunto" #name="ngModel"  type="text" placeholder="Asunto" />
         </div>
-        <textarea name="body" [(ngModel)]="contactFormValues.body" #name="ngModel"  cols="30" rows="10" placeholder="Mensaje"></textarea>
+        <textarea name="body" [(ngModel)]="contactFormValues.body" #name="ngModel"  cols="30" rows="10" placeholder="Mensaje" ></textarea>
         <input type="submit" value="Enviar Mensaje" class="btn">
     </form>
 </section>
